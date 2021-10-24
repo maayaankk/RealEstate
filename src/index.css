@@ -1,0 +1,1697 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+	font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html, body {
+  /*overflow: hidden;*/
+  height: 100%;
+  width: 100%;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  border: 1px solid green !important;
+  -webkit-text-fill-color: green;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+body {
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+}
+ol, ul , li{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#root {
+  height: 100%;
+  widows: 100%;
+}
+.MainWrapper {
+  height: 100%;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 75px 55px auto;
+  grid-template-areas: 
+    "h h"
+    "s s"
+    "m d";
+}
+.NavBar {
+  grid-area: h;
+  z-index: 2;
+  background: #ffffff;
+  width: 100%;
+  height: 75px;
+}
+.NavBar > div {
+  text-align: left;
+  height: 100%;
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  color: #2F3D44;
+}
+.NavBar > div > li:nth-of-type(1) {
+  margin-left: 0px;
+  width: 17%;
+  min-width: 175px;
+}
+.NavBar > div > div{
+  text-align: right;
+  flex: 1 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  height: 100%;
+}
+.NavBar > div > li {
+  text-align: center;
+  margin-left: 2%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: 3.6rem;
+  box-sizing: border-box;
+  border-bottom: 5px solid transparent;
+  justify-content: center;
+}
+.NavBar > div > li:hover {
+  border-bottom-color:#0acc3c;
+  color:#0acc3c;
+}
+.NavBar > div > li:nth-of-type(1):hover {
+  border-bottom-color:transparent;
+  color:#0acc3c;
+}
+.NavBar >div > li:nth-child(1) a {
+  padding-left: 0;
+  height: 100%;
+  width: 100%;
+}
+.NavBar >div > li:nth-child(1) > a > img{
+  object-fit: contain;
+  margin-bottom: 4px;
+  width: 85%;
+}
+.NavBar div li a {
+  font-size: 1.05rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 5px;
+  color: inherit;
+  box-sizing: border-box;
+}
+.NavBar_Div {
+  text-align:left;
+  flex:1
+}
+
+.NavBar_Mid_Div {
+  text-align: center;
+   flex: 1;
+   width: 20vw;
+   height: 5vw;
+}
+
+.NavBar_Mid_Div li a{
+  display: 'block';
+  color: 'rgb(18, 180, 124)';
+  text-align: 'center';
+  text-decoration: 'none';
+  font-size: '3.2vw';
+  width: '20vw';
+  font-weight: 'bold';
+}
+.NavBar_Right_Div {
+  text-align: right;
+  flex: 1
+}
+input {
+  box-shadow : none;  
+  -webkit-appearance: none;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 0px;
+  border-width: 2px;
+  border-style: none;
+  border-color: none;
+  border-image: none;
+}
+input[type="text"]:focus, input[type="submit"]:focus {
+  outline: none;
+  }
+input[type="text"] {
+  font-size: 94%;
+  width: 100%;
+}
+#S1 {
+  min-width: 60px;
+  position: relative;
+}
+#S2 {
+  width: 50%;
+  margin-left: 1rem;
+  min-width: 60px;
+}
+#S3 {
+  width: 6%;
+  margin-left: 1rem;
+  min-width: 60px;
+}
+#S4 {
+  width: 8%;
+  min-height: 32px;
+  text-align: center;
+  margin-left: 1rem;
+  background-color: #0acc3c;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  min-width: 70px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  box-shadow: -2px 2px 4px 0 rgba(0,0,0,.4);
+}
+#S4:hover {
+  background-color: #11a938;
+}
+.SearchBars {
+  grid-area: s;
+  z-index: 2;
+  border-bottom: 1px solid #f1fbf4;
+  background: #f1fbf4;;
+  width: 100%;
+  height: 100%;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+}
+.SearchBars > div {
+  display: flex;
+  align-items: center;
+  min-height: auto;
+  margin: 0% 3.5%;
+  width: 96%;
+  height: 100%;
+}
+.SearchBars form {
+  min-height: auto;
+  margin: 0;
+  border: none;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  height: 55%;
+  color: #2F3D44
+}
+.SearchBars form div {
+  display: flex;
+  width: 23rem;
+}
+.SearchBars form li, .SearchBars > form input {
+  min-height: 32px;
+  color: #444;
+  display: inline-block;
+  width: 100%;
+  padding-left: 16px;
+  background: #fff;
+  border: 1px solid #f1fbf4;
+  border-radius: 3px;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+#Loader {
+  grid-template-columns: unset;
+  overflow-y: unset;
+  overflow-x: unset;
+  margin-top: 4rem;
+  align-self: center;
+  margin-right: 1rem;
+}
+.DashBoard {
+  flex-direction: column;
+  overflow-y: hidden;
+  display: flex;
+  grid-area: d;
+  box-shadow: -2px 2px 5px 0 rgba(0,0,0,.4);
+  z-index: 1;
+  position: relative;
+  align-items: center;
+  padding: 1rem 0px;
+}
+.DashBoard h1 {
+  font-size: 1.7rem;
+  padding-top: 2%;
+  padding-bottom: 1.5%;
+  padding-left: 2%;
+  font-weight: 600;
+  color: #2F3D44;
+  align-self: flex-start;
+}
+.DashBoard >h1 > p {
+  color: #a3abab;
+  font-weight: 500;
+  display: inline;
+}
+.DashBoard > div{
+  padding: 8px;
+  overflow-y: scroll;
+  width: 85%;
+  overflow-x: hidden;
+  height: 100%;
+  display: grid;
+  grid-auto-rows: 265px;
+  grid-gap: 22px;
+  grid-column-gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.DashBoard > div::-webkit-scrollbar-track
+{
+	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;*/
+}
+
+.DashBoard > div::-webkit-scrollbar {
+  width: 10px;
+}
+/*
+.DashBoard > div::-webkit-scrollbar-thumb {
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+.DashBoard > div::-webkit-scrollbar-thumb:active {
+	border-radius: 8px;
+  -webkit-box-shadow: 0 0 1px 1px hsla(0,0%,100%,.25);
+}
+*/
+.DashBoard span {
+  color: #a3abab;
+  font-weight: 500;
+}
+.DashBoardItems {
+  display: flex;
+  cursor: pointer;
+  align-items: baseline;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 6px 12px -2px rgba(50,50,93,.25), 0 3px 7px -3px rgba(0,0,0,.3);
+  border-radius: 5% 5% 0px 0px;
+  margin-bottom: 10%;
+}
+.DashBoardIcons {
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  width: 95%;
+  padding: 2% 0%;
+  height: 9%;
+  margin-left: 5%;
+  font-size: 1rem;
+}
+.DashBoardIcons li {
+  display: flex;
+  flex-direction: row;
+  color: #a3abab;
+  font-weight: 500;
+  align-items: center;
+}
+.DashBoardIcons li:nth-of-type(2) {
+  margin: 0px 23px;
+}
+.DashBoardIcons li sup{
+  font-size: 0.6rem;
+  padding-bottom: 0.4rem;
+}
+.DashBoardImg {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.DashBoardImg:hover img {
+  transform: scale(1.15);
+}
+.DashBoardItems img {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  object-fit: cover;
+  transition: transform 1.0s ease;
+  position: relative;
+}
+.DashBoardImg li {
+  position: absolute;
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  bottom: 6%;
+  left: 4%;
+  z-index: 1;
+  text-shadow: 0 1px #444;
+}
+.DashBoardImg > div {
+  content: '';
+  display: block;
+  height: 30%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
+  background-repeat: repeat-x;
+}
+
+
+.DashBoardItems li{
+  text-decoration: none;
+  list-style-type: none;
+  list-style: none;
+}
+.DashBoardMainData {
+  padding-top: 4%;
+  padding-bottom: 1%;
+  margin-left: 4%;
+  height: 16%;
+  margin-bottom: 2%;
+}
+.DashBoardMainData li{
+  padding: 2px 0px;
+}
+.DashBoardMainData :nth-child(1){
+  font-weight: bold;
+  color: #2F3D44;
+  font-size: .9rem;
+  min-width: 110px;
+}
+
+.DashBoardMainData :nth-child(2){
+  color: #9da6a6;
+  font-size: 0.8rem;
+  font-weight: 400;
+  min-width: 60px;
+}
+.DashBoardMainData :nth-child(3){
+  color: #00B074;
+  padding-top: 8%;
+  font-weight: 800;
+  font-size: 1rem;
+  min-width: 50px;
+}
+.HouseInfoMain {
+  box-shadow: -2px 2px 5px 0 rgba(0,0,0,.4);
+  z-index: 1;
+  position: relative;
+  flex: 1;
+  overflow-y:scroll;
+  overflow-x: hidden;
+}
+.HouseInfo-close {
+  position: absolute;
+  top: 40%;
+  color: #546479;
+  right: -24px;  
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  background: white;
+  box-shadow: -2px 2px 5px 0 rgba(0,0,0,.4);
+  border: solid rgba(0,0,0,.4) 1px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 1;
+	animation: fadein 0.3s linear;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+/*
+.HouseInfo-close:target {
+  -webkit-transition: opacity 1.5s ease-in;
+  -moz-transition: opacity 1.5s ease-in;
+  -o-transition: opacity 1.5s ease-in;
+  opacity: 1; 
+}
+*/
+.HouseInfo-Wrap {
+  flex-direction: column;
+  overflow-y: hidden;
+  display: flex;
+  grid-area: d;
+  box-shadow: -2px 2px 5px 0 rgba(0,0,0,.4);
+  z-index: 1;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.HouseInfo {
+  padding: 8px;
+  overflow-y: scroll;
+  margin: 0px 20px;
+  margin-top: 50px;
+  overflow-x: hidden;
+  height: 100%;
+  display: grid;
+  grid-gap: 10px;
+  opacity: 1;
+	animation: fadein 0.4s linear;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 120px 120px 40px 40px 20px 50px 50px 180px;
+  grid-template-areas:
+    "s1 s1 s1 b b b b b b b b b"
+    "s2 s2 s2 b b b b b b b b b "
+    "mt mt mt mt mt mt mt mt pt pt pt pt"
+    "st st st st . . . . . . . ."
+    "ln ln ln ln ln ln ln ln ln ln ln ln"
+    "d1 d1 d1 d1 d2 d2 d2 d2 d3 d3 d3 d3"
+    "d4 d4 d4 d4 d5 d5 d5 d5 d6 d6 d6 d6"
+    "dt dt dt . ds ds ds ds ds ds ds ds";
+}
+.HouseInfo::-webkit-scrollbar-track
+{
+	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;*/
+}
+
+.HouseInfo::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 6px;
+}
+.DashBoard > div::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 6px;
+}
+.HouseInfo::-webkit-scrollbar-track:hover {
+  background-color: #cccccc;
+}
+.DashBoard > div::-webkit-scrollbar-track:hover {
+  background-color: #cccccc;
+}
+
+.HouseInfo::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 6px;
+  max-height: 50px;
+}
+.DashBoard > div::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 6px;
+  max-height: 50px;
+}
+.HouseInfo::-webkit-scrollbar-thumb:hover {
+  background-color: #747474;
+}
+.DashBoard > div::-webkit-scrollbar-thumb:hover {
+  background-color: #747474;
+}
+.HouseInfo::-webkit-scrollbar-thumb:active {
+  background-color: #5d5d5d;
+}
+.DashBoard > div::-webkit-scrollbar-thumb:active {
+  background-color: #5d5d5d;
+}
+/*
+.HouseInfo::-webkit-scrollbar-thumb {
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
+  max-height: 50px;
+}
+.HouseInfo::-webkit-scrollbar-thumb:active {
+	border-radius: 8px;
+  -webkit-box-shadow: 0 0 1px 1px hsla(0,0%,100%,.25);
+}
+*/
+.HouseInfo-small {
+  grid-area: s1;
+  border-radius: 6%;
+  box-shadow: -2px 2px 5px 0 rgba(0,0,0,.4);
+}
+.HouseInfo-small-o {
+  grid-area: s2;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 6%;
+  box-shadow: -2px 2px 5px 0 rgba(0,0,0,.4);
+}
+.HouseInfo-small-o > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgba(63, 77, 83, .8);
+  object-fit: none;
+  border-radius: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+}
+.HouseInfo-small-o > div > div {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.HouseInfo-small-o > div > span {
+  font-size: 1rem;
+  text-align: center;
+  padding-left: 2%;
+  color: rgba(255, 255, 255, .9);
+}
+.Gallery__NavigationArrow button {
+  background-color: rgba(255, 255, 255, 0.0) !important;
+  color: white !important;
+  filter: drop-shadow(rgb(59, 65, 68) 1px 2px 2px) !important;
+  text-shadow: 2px 1px 10px rgba(0,0,0,0.8);
+}
+.GestureGallery {
+  grid-area: b;
+  box-shadow: -2px 2px 5px 0 rgba(0,0,0,.4);
+  border-radius: 1rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #1c2225;
+  border-radius: 2%;
+}
+.HouseInfo > li:nth-child(4) {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2F3D44;
+  align-self: flex-end;
+}
+.HouseInfo > li:nth-child(4) span {
+  font-weight: 700;
+  color: #7e8989;
+}
+.HouseInfo > li:nth-child(5) {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00B074;
+  align-self: flex-end;
+}
+.HouseInfo > li:nth-child(6) {
+  font-size: 1rem;
+  color: #7e8989;
+  align-self: flex-start;
+}
+#desc {
+  grid-area: dt;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2F3D44;
+  align-items: flex-start;
+  padding-top: 8px;
+  display: flex;
+}
+.HouseInfo > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.HouseInfo > ul li:nth-child(1) {
+  font-size: 0.85em;
+  color: #7e8989;
+}
+.HouseInfo > ul li:nth-child(2) {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #2F3D44;
+  align-items: center;
+  padding-top: 8px;
+  display: flex;
+}
+.HouseInfo > ul li:nth-child(2) > sup{ 
+  padding-bottom: 5%;
+}
+.Gallery__NavigationArrow > button {
+  width: 50px !important;
+  height: 50px !important;
+}
+.Gallery__NavigationArrow > button > svg{
+    margin-right: 0px !important;
+    margin-top: 0px !important;
+    width: 45px;
+    height: 45px;
+}
+.Gallery__NavigationArrow {
+  user-select: none;
+  outline: none;
+}
+.Gallery__NavigationArrow > button {
+  background: rgba(23, 24, 29, 0.5) !important;
+  border-radius: 0px !important; 
+}
+.Gallery__NavigationArrow:active {
+  outline: none;
+}
+.Gallery__NavigationArrow button:hover {
+  color: white;
+}
+.Gallery__Indicators {
+  transition: all .2s ease-in-out !important;
+}
+.GalleryImage > img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  max-height: 100%;
+  object-fit: none;
+  border-radius: 3%;
+}
+.HouseInfo > div > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 6%;
+  object-fit: cover;
+}
+.HouseInfo-bottom{
+  display: flex;
+  flex-direction: column;
+  padding-top: 2vw;
+  padding-bottom: 4vw;
+}
+.HouseInfo-bottom-main ul{
+  display: flex;
+  flex-direction: row;
+}
+.HouseInfo-bottom-main > ul li{
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2F3D44;
+}
+.HouseInfo-bottom-main li{
+  font-size: 1.1rem;
+  color: #7e8989;
+  padding-top: 0.4vw;
+}
+.HouseInfo-bottom-main > ul li span{
+  color: #7e8989;
+}
+.HouseInfo-bottom-main > ul li:last-child{
+  padding-left: 30%;
+  color: #00B074;
+}
+.HouseInfo-bottom-secondary {
+  padding-top: 2.5rem;
+}
+.HouseInfo-bottom-secondary div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 3%;
+}
+.HouseInfo-bottom-secondary ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 20%;
+}
+.HouseInfo-bottom-secondary ul:nth-child(2) {
+  padding-left: 10%;
+  align-items: center;
+}
+.HouseInfo-bottom-secondary ul:nth-child(3) {
+  padding-left: 10%;
+  align-items: center;
+}
+.HouseInfo-bottom-secondary ul li:nth-child(1){
+  font-size: 0.85em;
+  color: #7e8989;
+}
+.HouseInfo-bottom-secondary ul li:nth-child(2){
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #2F3D44;
+  align-items: center;
+  padding-top: 8px;
+  display: flex;
+}
+.HouseInfo-bottom-secondary-desc{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.HouseInfo-bottom-secondary-desc li:nth-child(1){
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #2F3D44;
+  display: flex;
+}
+.HouseInfo-bottom-secondary-desc li:nth-child(2){
+  font-size: 0.85em;
+  color: #7e8989;
+  width: 100%;
+  padding-top: 0;
+  padding-left: 15px;
+  line-height: 1.6;
+}
+.GMap {
+  grid-area: m;
+  height: auto;
+  position: relative;
+}
+.MapInfo {
+  width: 100%;
+  height: 75px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  color: #7e8989;
+  cursor: pointer;
+}
+.MapInfo img {
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
+}
+.MapInfo > div {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  width: 100%;
+}
+.MapInfo > div h1:nth-child(1){
+  padding-top: 5%;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #7e8989;
+  height: 40%;
+}
+.MapInfo > div h1:nth-child(2) {
+  font-size: 0.9rem;
+  color: #00B074;
+  font-weight: 700;
+  height: 25%;
+}
+.MapInfo div ul{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  color: #7e8989;
+  height: 40%;
+}
+.MapInfo div ul li {
+  font-size : 0.8rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.MapInfo div ul li:nth-of-type(2){
+  padding-left: 4%;
+}
+.MapInfo div ul:nth-child(2) {
+  padding-left: 0.4rem;
+}
+.gm-style-iw > button {
+  right: -1px !important;
+}
+.gm-style-iw > button > img {
+  width: 17px !important;
+  height: 17px !important;
+}
+.gm-style .gm-style-iw-c {
+  width: 245px;
+}
+.FindHomeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.FindHome-Hero-Wrapper {
+  width: 75%; 
+  height: 100%;
+  position: relative;
+}
+.FindHome-Hero {
+  min-height: 600px;
+  background-position: center center;
+  width: 100%; 
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.FindHome-Hero *{
+  z-index: 2;
+  position: relative;
+}
+.FindHome-Hero-Text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  height: 100%;
+  width: 100%;
+}
+.FindHome-Hero-Text > div {
+  width: 50%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.FindHome-Hero-Text > div> h1{
+  width: 80%;
+  font-size: 3.5rem;
+  line-height: 3.9rem;
+
+}
+.FindHome-Hero-Text > div > p{
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  border-left: 2px solid white;
+  padding-left: 5%;
+  margin-top: 5%;
+}
+.FindHome-Hero-Text > div > a{
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  margin-top: 3%;
+  align-self: flex-start;
+  border-radius: 50%;
+  font-weight: 600;
+  background-color: #36bb19;
+  width: 8rem;
+  margin-left: 5%;
+  height: 2.6rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 1% 3%;
+  border-radius: 24px;
+  cursor: pointer;
+}
+.MainText-Wrapper {
+  min-height: 600px;
+  color: #231957;
+  margin-top: 5%;
+  width: 75%; 
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.MainText-Wrapper > div:nth-of-type(1){
+  width: 100%; 
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+.MainText-Wrapper > div:nth-of-type(1) > h1{
+  width: 60%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  padding-top: 2%;
+  line-height: 2.7rem;
+  text-align: center;
+}
+.MainText-Wrapper > div:nth-of-type(2) {
+  width: 100%; 
+  height: 65%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.MainText-Wrapper > div:nth-of-type(2) > div{
+  width: 50%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.MainText-Wrapper > div:nth-of-type(2) > div:nth-of-type(1) h2{
+  width: 60%; 
+  font-weight: 600;
+  color: #231957;
+  padding-top: 4%;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin-right: 5%;
+}
+.MainText-Wrapper > div:nth-of-type(2) > div:nth-of-type(1) p{
+  width: 60%; 
+  font-weight: 400;
+  color: #5d5a73;
+  padding-top: 4%;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin-right: 5%;
+}
+.MainText-Wrapper > div:nth-of-type(2) > div > img{
+  height: 100%; 
+  width: 100%;
+  object-fit: cover;
+}
+.ActionSteps-Wrapper {
+  min-height: 550px;
+  color: #231957;
+  margin-top: 15%;
+  width: 75%; 
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.ActionSteps-Wrapper > div{
+  width: 30%; 
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.ActionSteps-Wrapper > div > div:nth-of-type(1){
+  width: 100%; 
+  height: 40%;
+  position: relative;
+}
+.ActionSteps-Wrapper > div > div > img{
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.ActionSteps-Wrapper > div > :nth-of-type(1) > div{
+  width: 40px;
+  height: 40px;
+  top: 0;
+  right: 0;
+  background: blue;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 900;
+}
+.ActionSteps-Wrapper > div > div:nth-of-type(2){
+  margin-top: 5%;
+  width: 90%; 
+  height: 50%;
+}
+#BackBtn {
+  background: white;
+  justify-self: center;
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  display: none;
+  font-weight: 600;
+  height: 4rem;
+  width: 6.5rem;
+  border-radius: 0.3rem;
+  border: 2px solid #f4f2f4;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+#BackBtn > svg {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+.ActionSteps-Wrapper > div > div h1{
+  height: 12%;
+  font-size: 1.1rem;  
+  color: #231957;
+  padding-left: 12%;
+  border-left: 2px solid blue;
+  font-weight: 600;
+}
+.ActionSteps-Wrapper > div > div > p{
+  font-size: 0.85rem;  
+  color: #868399;
+  padding-left: 12%;
+  padding-top: 6%;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.ActionSteps-Wrapper > div:nth-of-type(2){
+  margin-left: 5%;
+}
+.ActionSteps-Wrapper > div:nth-of-type(3){
+  margin-left: 5%;
+}
+.Benefits-Wrapper {
+  min-height: 530px;
+  color: #231957;
+  width: 75%; 
+  height: 85vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.Benefits-Wrapper > div{
+  margin-top: 2%;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.Benefits-Wrapper > div > div{
+  margin-top: 1%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Benefits-Wrapper > div > div > div{
+  width: 90%;
+  height: 50%;
+  display: flex;
+  align-items: flex-start;
+}
+.Benefits-Wrapper > div:nth-last-of-type(1) > div:nth-of-type(1) > div >h1{
+  font-size: 2.1rem;
+  line-height: 2.9rem;
+  font-weight: 600;
+}
+.Benefits-Wrapper > p {
+  color: blue;
+  width: 80%;
+  margin-top: 1%;
+  height: 5%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.Benefits-Wrapper > div > div > div > div > div > svg{
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  font-size: 100%;
+}
+.Benefits-Wrapper > div > div > div > div {
+  width: 100%;
+}
+.Benefits-Wrapper > div > div > div > div > h1{
+  
+  width: 100%;
+  height: 20%;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+.Benefits-Wrapper > div > div > div > div > p{
+  margin-top: 3%;
+  width: 100%;
+  height: 60%;
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+  color: #868399;
+}
+@media only screen and (max-width: 1220px) {
+  .NavBar > div > li:nth-of-type(1) {
+    margin-left: 0px;
+  }
+  .NavBar div li a {
+    line-height: 1rem;
+  }
+  .DashBoardIcons li:nth-of-type(2) {
+    margin: 0px 12px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .DashBoard > div {
+    width: 95%;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .HouseInfo > ul li:nth-child(2) {
+    font-size: 0.9rem;
+  }
+  #desc {
+    font-size: 0.9rem;
+  }
+  .HouseInfo {
+    grid-template-rows: 90px 90px 40px 40px 20px 50px 50px 180px;
+  }
+}
+@media only screen and (max-width: 840px) {
+  #BackBtn {
+    display: flex;
+  }
+  .HouseInfo {
+    margin-top: 20px;
+    grid-template-rows: 120px 120px 40px 40px 20px 50px 50px 180px;
+  }
+  .DashBoardMainData {
+    padding-top: 2%;
+    margin-left: 4%;
+    height: 25%;
+}
+.DashBoardMainData :nth-child(3) {
+  padding-top: 3%;
+  font-size: 1rem;
+}
+  input[type="text"] {
+    font-size: 85%;
+}
+  .DashBoardImg {
+    height: 75%;
+  }
+  .DashBoardIcons {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: 10%;
+  }
+  .DashBoardIcons li {
+    font-size: 0.95rem;
+  }
+  .DashBoard > div {
+    grid-gap: 20px;
+  }
+  .DashBoard {
+    grid-area: d;
+  }
+  .GMap {
+    display: none;
+  }
+  .MainWrapper {
+    grid-gap: 0px;
+    grid-template-areas: 
+      "h h"
+      "s s"
+      "d d";
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .FindHome-Hero-Text > div> h1 {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+  .DashBoardIcons li:nth-of-type(2) {
+    margin: 0px 3px;
+}
+  .FindHome-Hero-Text > div > p {
+    font-size: 90%;
+    line-height: 1.1rem;
+  }
+  .MainText-Wrapper > div:nth-of-type(1) > h1 {
+    width: 60%;
+    font-size: 70%;
+    padding-top: 2%;
+    line-height: 2.7rem;
+    text-align: center;
+}
+.MainText-Wrapper > div:nth-of-type(2) > div:nth-of-type(1) h2 {
+  width: 70%;
+  font-weight: 600;
+  padding-top: 4%;
+  font-size: 75%;
+  line-height: 1.5rem;
+  margin-right: 2%;
+}
+.MainText-Wrapper > div:nth-of-type(2) > div:nth-of-type(1) p {
+  width: 70%;
+  font-weight: 300;
+  padding-top: 4%;
+  font-size: 75%;
+  line-height: 1.5rem;
+  margin-right: 2%;
+}
+.Benefits-Wrapper > div > div > div > div > p {
+  margin-top: 3%;
+  width: 100%;
+  height: 60%;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  color: #868399;
+}
+}
+@media only screen and (max-width: 810px) {
+  .FindHome-Hero-Text > div > div {
+    font-size: 0.8rem;
+    width: 6rem;
+    height: 2.1rem;
+}
+.FindHome-Hero-Text > div > div > p {
+  font-size: 0.65rem;
+}
+  .FindHome-Hero-Text > div> h1 {
+    width: 80%;
+    font-size: 150%;
+    line-height: 2.4rem;
+  }
+  .FindHome-Hero-Text > div > p {
+    font-size: 60%;
+    line-height: 1rem;
+}
+.ActionSteps-Wrapper {
+  flex-direction: column;
+}
+.ActionSteps-Wrapper > div {
+  width: 100%;
+  height: 30%;
+  padding-top: 3rem;
+  flex-direction: row;
+}
+.ActionSteps-Wrapper > div:nth-of-type(3), .ActionSteps-Wrapper > div:nth-of-type(2) {
+  margin-left: 0%;
+}
+.ActionSteps-Wrapper > div > div:nth-of-type(1) {
+  width: 60%;
+  height: 100%;
+}
+.ActionSteps-Wrapper > div > div:nth-of-type(2) {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.ActionSteps-Wrapper > div > div h1 {
+  height: 12%;
+  font-size: 1rem;
+  color: #231957;
+  padding-left: 10%;
+  border-left: none; 
+}
+.ActionSteps-Wrapper > div > div > p {
+  font-size: 0.75rem;
+  color: #868399;
+  padding-left: 12%;
+  padding-top: 6%;
+  font-weight: 300;
+  line-height: 1.1rem;
+}
+.MainText-Wrapper > div:nth-of-type(2) > div > img {
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+}
+.MainText-Wrapper {
+  min-height: 600px;
+  color: #231957;
+  margin-top: 5%;
+  width: 75%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.MainText-Wrapper > div:nth-of-type(1) {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+.MainText-Wrapper > div:nth-of-type(1) > h1 {
+  width: 60%;
+  font-size: 70%;
+  padding-top: 2%;
+  line-height: 2.7rem;
+  text-align: center;
+}
+.MainText-Wrapper > div:nth-of-type(2) {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+.MainText-Wrapper > div:nth-of-type(2) > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.MainText-Wrapper > div:nth-of-type(2) > div:nth-of-type(1) p {
+  width: 70%;
+  font-weight: 300;
+  padding-top: 4%;
+  font-size: 70%;
+  line-height: 1.1rem;
+  margin-right: 2%;
+}
+.MainText-Wrapper > div:nth-of-type(2) > div:nth-of-type(1) h2 {
+  width: 70%;
+  font-weight: 600;
+  padding-top: 2%;
+  font-size: 70%;
+  line-height: 1.1rem;
+  margin-right: 2%;
+}
+.Benefits-Wrapper {
+  margin-top: 100px;
+}
+.Benefits-Wrapper > div:nth-last-of-type(1) > div:nth-of-type(1) > div >h1 {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+.Benefits-Wrapper > div > div > div > div > h1 {
+  font-size: 0.85rem;
+  line-height: 1.4rem;
+}
+.Benefits-Wrapper > div > div > div > div > p {
+  margin-top: 3%;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  color: #868399;
+}
+}
+@media only screen and (max-width: 700px) {
+  .FindHome-Hero-Text > div > div {
+    font-size: 0.8rem;
+    width: 5rem;
+    height: 1.7rem;
+}
+.FindHome-Hero-Text > div > div > p {
+  font-size: 0.55rem;
+}
+.Benefits-Wrapper > div {
+  margin-top: 2%;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Benefits-Wrapper > div > div > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.Benefits-Wrapper > div > div {
+  margin-top: 1%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Benefits-Wrapper > div > div > div > div > p {
+  margin-top: 3%;
+  font-size: 0.6rem;
+  line-height: 1rem;
+}
+}
+@media only screen and (max-width: 475px) {
+  .HouseInfo-small {
+    display: none;
+  }
+  .HouseInfo-small-o {
+    display: none;
+  }
+  .HouseInfo {
+    grid-template-areas:
+        "b b b b b b b b b b b b"
+        "b b b b b b b b b b b b "
+        "mt mt mt mt mt mt mt mt pt pt pt pt"
+        "st st st st . . . . . . . ."
+        "ln ln ln ln ln ln ln ln ln ln ln ln"
+        "d1 d1 d1 d1 d2 d2 d2 d2 d3 d3 d3 d3"
+        "d4 d4 d4 d4 d5 d5 d5 d5 d6 d6 d6 d6"
+        "dt dt dt . ds ds ds ds ds ds ds ds";
+  }
+  .GestureGallery {
+    width: 95% !important;
+    margin-left: 0 !important;
+  }
+  .FindHome-Hero-Text > div> h1 {
+    width: 100%;
+  }
+  .FindHome-Hero-Text {
+    flex-direction: column;
+  }
+  .FindHome-Hero-Text > div {
+    width: 100%;
+    height: unset;
+    margin-bottom: 0;
+  }
+  .Benefits-Wrapper {
+    height: unset;
+    padding-bottom: 50px;
+    margin-top: 60px;
+  }
+  .Benefits-Wrapper > div > div {
+    height: unset;
+  }
+  .Benefits-Wrapper > div > div > div > div {
+    margin-top: 40px;
+  }
+  .Benefits-Wrapper > div > div > div {
+    height: unset;
+  }
+  .Benefits-Wrapper > div > div > div > div:nth-of-type(1) {
+    display: none !important;
+  }
+  .ActionSteps-Wrapper {
+    height: unset;
+    margin-top: 0;
+  }
+  .ActionSteps-Wrapper > div > div > p {
+    padding-left: 0;
+  }
+  .ActionSteps-Wrapper > div > div h1 {
+    padding-left: 0;
+  }
+  .ActionSteps-Wrapper > div > div:nth-of-type(2) {
+    width: 100%;
+  }
+  .ActionSteps-Wrapper > div > div:nth-of-type(1) {
+    width: 100%;
+  }
+  .ActionSteps-Wrapper > div {
+    flex-direction: column;
+  }
+  .MainText-Wrapper {
+    height: unset;
+  }
+  .MainText-Wrapper > div:nth-of-type(2) {
+    height: unset;
+  }
+  .MainText-Wrapper > div:nth-of-type(2) > div > img {
+    width: 100%;
+  }
+  .MainText-Wrapper > div:nth-of-type(2) > div:nth-of-type(1) h2 {
+    width: 100%;
+    padding-top: 30px;
+  }
+  .MainText-Wrapper > div:nth-of-type(2) > div:nth-of-type(1) p {
+    width: 100%;
+  }
+  .MainText-Wrapper > div:nth-of-type(2) > div {
+    width: 100%;
+  }
+  .MainText-Wrapper > div:nth-of-type(1) > h1 {
+    width: 100%;
+    font-size: 1.7rem;
+  }
+  .MainText-Wrapper > div:nth-of-type(1) {
+    height: unset;
+    margin-bottom: 2rem;
+  }
+  #desc {
+    font-size: 0.6rem;
+  }
+  #BackBtn {
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    height: 2rem;
+    width: 3.5rem;
+    border-radius: 0.1rem;
+    border: 2px solid #f4f2f4;
+  }
+  #BackBtn > svg {
+    margin-right: 5px;
+    font-size: 0.8rem;
+  }
+  .HouseInfo > ul li > svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  .HouseInfo > ul li:nth-child(2) {
+    font-size: 0.6rem;
+  }
+  .HouseInfo > ul {
+    font-size: 0.65rem;
+  }
+  .HouseInfo > li:nth-child(4) {
+    font-size: 0.7rem;
+  }
+  .HouseInfo > li:nth-child(5) {
+    font-size: 0.7rem;
+  }
+  .HouseInfo > li:nth-child(6) {
+    font-size: 0.6rem;
+  }
+  .HouseInfo {
+    padding-top: 0;
+    grid-template-rows: 75px 75px 40px 40px 0px 50px 50px 180px;
+  }
+  .SearchBars form div {
+    flex-direction: column;
+  }
+  .SearchBars > div {
+    margin: 0;
+    margin-left: 3.5%;
+    width: 96%;
+  }
+  .DashBoard {
+    padding-top: 0px;
+    overflow-x: hidden;
+  }
+  .DashBoard > div {
+    grid-template-columns: 1fr;
+  }
+  #S1 {
+    height: 20px;
+  }
+  #S1 >svg {
+    width: 0.65rem !important;
+    height: 0.65rem !important;
+    top: 20% !important;
+  }
+  #S2 {
+    margin-top: 5px;
+    margin-left: 0;
+    width: 80%;
+    height: 20px;
+  }
+  .SearchBars form li {
+    min-height: unset;
+    font-size: 0.65rem;
+  }
+  #S3 {
+    margin-left: 2rem;
+    height: 20px;
+  }
+  #S4 {
+    margin-top: 5px;
+    margin-left: 2.15rem;
+    min-height: 14px;
+    font-size: 0.55rem;
+    height: 20px;
+  }
+  .MainWrapper {
+    grid-template-rows: 75px 50px auto;
+  }
+  .SearchBars form {
+    height: 40px;
+  }
+  .DashBoard h1 {
+    display: none;
+  }
+  .NavBar > div {
+    margin-left: 1rem;
+  }
+  .NavBar > div > li:nth-of-type(1) {
+    width: 27%;
+    min-width: 0px;
+  }
+  .NavBar >div > li:nth-child(1) > a > img {
+    margin-bottom: 0px;
+  }
+  .NavBar > div > li {
+    width: 12%;
+  }
+  .NavBar div li a {
+    font-size: 0.75rem;
+  }
+  .HouseInfo-small-o > div > div {
+    width: 1rem;
+    height: 1rem;
+  }
+  .HouseInfo-small-o > div > div > svg {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+  .HouseInfo-small-o > div > span {
+    font-size: 0.7rem;
+    padding-left: 8%;
+  }
+}
