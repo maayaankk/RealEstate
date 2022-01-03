@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import NavBar from './Components/NavBar';
 import SearchBars from './Components/SearchBars';
 import GMap from './Components/GMap';
